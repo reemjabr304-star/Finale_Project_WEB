@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم الطعام الشهي</title>
+
+    <!-- ملف CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ====== قسم الصفحة الرئيسية ====== -->
+<section id="Home">
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="Logo">
+                <h2>مطعم <span>الشهي</span></h2>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#Home" class="active">الرئيسية</a></li>
+                <li><a href="#About">من نحن</a></li>
+                <li><a href="#Menu">القائمة</a></li>
+                <li><a href="#Gallary">المعرض</a></li>
+                <li><a href="#Contact">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main">
+        <div class="men-text">
+            <h1>
+                احصل على <span>طعام طازج</span><br>
+                بأسهل وأسرع طريقة
+            </h1>
+        </div>
+
+        <div class="main_imge">
+            <img src="images/main_img.jpeg" alt="Food Image">
+        </div>
+    </div>
+
+    <p>
+        نقدّم لكم أشهى المأكولات الطازجة المحضّرة بعناية وبأفضل المكونات
+        نحرص على الجودة العالية والطعم المميز لإرضاء جميع الأذواق
+        مع خدمة سريعة وتجربة طعام لا تُنسى
+    </p>
+
+    <div class="main_btn">
+        <a href="#Contact">اطلب الآن</a>
+    </div>
+</section>
+
+<!-- ====== قسم من نحن ====== -->
+<div class="about" id="About">
+    <div class="about_main">
+        <div class="image">
+            <img src="images/Food-Plate.jpeg" alt="About Image">
+        </div>
+
+        <div class="about_text">
+            <h1><span>من</span> نحن</h1>
+            <h3>لماذا تختار مطعمنا؟</h3>
+            <p>
+                نحن مطعم متخصص في تقديم الوجبات الشهية باستخدام مكونات طازجة
+                وبوصفات مميزة تجمع بين الطعم الرائع والجودة العالية
+                نسعى دائمًا لتقديم أفضل خدمة وتجربة طعام مريحة وممتعة
+            </p>
+        </div>
+    </div>
+
+    <a href="#Menu" class="about_btn">تعرّف على القائمة</a>
+</div>
+
+<!-- ====== قسم القائمة ====== -->
+<div class="menu" id="Menu">
+    <h1>قائمة <span>الطعام</span></h1>
+
+    <!-- هذا الـ div مهم لعمل JavaScript -->
+    <div class="menu_box" id="menu-dynamic-container">
+        <!-- يتم توليد العناصر من JavaScript -->
+    </div>
+</div>
+
+<!-- ====== قسم المعرض ====== -->
+<div class="gallary" id="Gallary">
+    <h1>معرض <span>الصور</span></h1>
+
+    <div class="gallary_image_box">
+
+        <div class="gallary_image">
+            <img src="images/gallary_1.jpeg" alt="">
+            <h3>وجباتنا</h3>
+            <p>نقدّم أشهى الأطباق بأفضل جودة وطعم</p>
+            <a href="#Contact" class="gallary_btn">اطلب الآن</a>
+        </div>
+
+        <div class="gallary_image">
+            <img src="images/gallary_2.jpeg" alt="">
+            <h3>وجباتنا</h3>
+            <p>نقدّم أشهى الأطباق بأفضل جودة وطعم</p>
+            <a href="#Contact" class="gallary_btn">اطلب الآن</a>
+        </div>
+
+        <div class="gallary_image">
+            <img src="images/gallary_3.jpeg" alt="">
+            <h3>وجباتنا</h3>
+            <p>نقدّم أشهى الأطباق بأفضل جودة وطعم</p>
+            <a href="#Contact" class="gallary_btn">اطلب الآن</a>
+        </div>
+
+        <div class="gallary_image">
+            <img src="images/gallary_4.jpeg" alt="">
+            <h3>وجباتنا</h3>
+            <p>نقدّم أشهى الأطباق بأفضل جودة وطعم</p>
+            <a href="#Contact" class="gallary_btn">اطلب الآن</a>
+        </div>
+
+        <div class="gallary_image">
+            <img src="images/gallary_5.jpeg" alt="">
+            <h3>وجباتنا</h3>
+            <p>نقدّم أشهى الأطباق بأفضل جودة وطعم</p>
+            <a href="#Contact" class="gallary_btn">اطلب الآن</a>
+        </div>
+
+        <div class="gallary_image">
+            <img src="images/gallary_6.jpeg" alt="">
+            <h3>وجباتنا</h3>
+            <p>نقدّم أشهى الأطباق بأفضل جودة وطعم</p>
+            <a href="#Contact" class="gallary_btn">اطلب الآن</a>
+        </div>
+
+    </div>
+</div>
+<section class="Contact">
+  <div class="contact-container">
+    <h1>تواصل معنا <span></span></h1>
+    <div class="Contact_main">
+      <form id="contact-form">
+        <div class="input-box">
+          <span>الاسم</span>
+          <input type="text" id="userName" placeholder="أدخل اسمك">
+        </div>
+        <div class="input-box">
+          <span>البريد الإلكتروني</span>
+          <input type="email" id="userEmail" placeholder="أدخل بريدك الإلكتروني">
+        </div>
+        <div class="input-box">
+          <span>رقم الهاتف</span>
+          <input type="text" id="userPhone" placeholder="أدخل رقم الهاتف">
+        </div>
+        <div class="input-box full-width">
+          <span>العنوان</span>
+          <input type="text" id="userAddress" placeholder="أدخل عنوانك">
+        </div>
+        <div class="input-box full-width">
+          <span>رسالتك</span>
+          <textarea id="userMessage" placeholder="اكتب رسالتك هنا"></textarea>
+        </div>
+        <button type="submit" class="input_btn full-width">إرسال</button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ====== الفوتر ====== -->
+<footer>
+    <div class="footer_main">
+
+        <div class="footer_tag">
+            <h2>فروعنا</h2>
+            <p>غزة</p>
+            <p>رفح</p>
+            <p>خانيونس</p>
+            <p>القدس</p>
+            <p>رام الله</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>روابط سريعة</h2>
+            <p>الرئيسية</p>
+            <p>من نحن</p>
+            <p>القائمة</p>
+            <p>المعرض</p>
+            <p>تواصل معنا</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>للتواصل</h2>
+            <p>+9725888882</p>
+            <p>+9705578412</p>
+            <p>foodshop854@gmail.com</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>خدماتنا</h2>
+            <p>توصيل سريع</p>
+            <p>دفع سهل</p>
+            <p>خدمة على مدار الساعة</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>روابط اجتماعية</h2>
+            <a href="https://www.instagram.com/foods_ps7" target="_blank">انستجرام</a>
+            <a href="https://x.com/TemptingFoodNow" target="_blank">تويتر (X)</a>
+        </div>
+
+    </div>
+
+    <p class="end">جميع الحقوق محفوظة <span>© 2021</span></p>
+</footer>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- ملف JavaScript -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
