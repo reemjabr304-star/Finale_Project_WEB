@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    direction: rtl; 
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* شريط التنقل */
+/* --- تنسيق شريط التنقل الاحترافي --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شفافة */
+    backdrop-filter: blur(10px); /* تأثير الزجاج الضبابي */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+    transition: 0.4s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+/* تنسيق الشعار */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 60px; /* حجم أصغر وأكثر تناسقاً */
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fac030;
+}
+
+.logo h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+.logo h2 span {
+    color: #fac030;
+}
+
+/* قائمة الروابط */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+/* تأثير الخط السفلي عند التمرير */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #fac030;
+    transition: 0.3s;
+}
+
+/* تنسيق الرابط عندما يكون نشطاً */
+.nav-links li a.active {
+    color: #fac030 !important; /* اللون الذهبي */
+}
+
+.nav-links li a.active::after {
+    width: 100% !important; /* بقاء الخط السفلي ظاهراً */
+}
+
+/* ضبط المسافة في الصفحة لأن الشريط أصبح "ثابتاً" بالأعلى */
+body {
+    padding-top: 5px;
+}
+
+/* التجاوب مع الجوال */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: row-reverse; /* لقلب العناصر في الجوال بشكل صحيح */
+    }
+    .nav-links {
+        display: none; /* يمكننا لاحقاً إضافة زر قائمة للجوال */
+    }
+}
+
+section .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 150px 5% 50px 5%; 
+}
+
+section .main .men-text h1 {
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+section .main .men-text h1 span {
+    color: #fac030;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 60px;
+}
+
+section .main .main_imge img {
+    width: 100%;
+    max-width: 600px;
+}
+
+section p {
+    width: 80%;
+    max-width: 650px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+section .main_btn {
+    background: #fac030;
+    margin: 20px auto;
+    width: 160px;
+    cursor: pointer;
+    padding: 12px 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+section .main_btn a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about {
+    width: 100%;
+    padding: 100px 5%;
+    background: #fdfdfd;
+}
+
+.about .about_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about .about_main .image img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.about .about_main .about_text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.about .about_main .about_text h1 span {
+    color: #fac030;
+}
+
+.about .about_btn {
+    background: #fac030;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    border-radius: 5px;
+}
+
+.Contact {
+    display: flex;
+    justify-content: center;  /* توسيط أفقي */
+    align-items: center;      /* توسيط رأسي */
+    padding: 100px 0;
+    background-color: #f8f9fa;
+    min-height: 80vh;         /* لضمان أن القسم يأخذ مساحة كبيرة ويكون في منتصف الصفحة */
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.Contact h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.Contact h1 span {
+    color: #fac030;
+    border-bottom: 3px solid #fac030;
+}
+
+.Contact_main form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.input-box span {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-box input,
+.input-box textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #fac030;
+    box-shadow: 0 0 8px rgba(250, 192, 48, 0.2);
+}
+
+.full-width,
+.input_btn {
+    grid-column: span 2; /* تجعل الحقل يأخذ كامل عرض النموذج */
+}
+
+.input-box textarea {
+    height: 100px;
+    resize: none;
+}
+
+.input_btn {
+    background: #fac030;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input_btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* ===== للجوال ===== */
+@media (max-width: 600px) {
+    .Contact_main form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width,
+    .input_btn {
+        grid-column: span 1;
+    }
+}
+
+footer {
+    background: #eee;
+    padding: 50px 5% 20px 5%;
+}
+
+.footer_main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.footer_tag h2 {
+    color: #fac030;
+    margin-bottom: 20px;
+}
+
+footer .end {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+.footer_tag a {
+    display: block;      /* تجعل كل رابط في سطر وحده */
+    color: #333;         /* لون النص */
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer_tag a:hover {
+    color: #fac030;      /* يتغير اللون عند تمرير الماوس */
+    padding-right: 5px;  /* حركة بسيطة لليمين */
+}
+/* --- تنسيق معرض الصور المطور --- */
+.gallary {
+    width: 100%;
+    padding: 70px 5%;
+    background: #f9f9f9;
+}
+
+.gallary h1 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallary h1 span {
+    color: #fac030;
+}
+
+/* استخدام الـ Grid لترتيب الصور في صفوف وأعمدة [متطلب تقني] */
+.gallary .gallary_image_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ترتيب تلقائي متجاوب */
+    grid-gap: 20px;
+}
+
+.gallary .gallary_image {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.gallary .gallary_image:hover {
+    transform: translateY(-10px); /* تأثير حركة عند تمرير الماوس */
+}
+
+.gallary .gallary_image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* لضمان عدم تشوه الصورة مهما كان حجمها الأصلي */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.gallary .gallary_image h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.gallary .gallary_image p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* تنسيق زر "اطلب الآن" داخل المعرض */
+.gallary_btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #fac030;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.gallary_btn:hover {
+    background: #000;
+}
